@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"> <!--Informa a codificação de caracteres, auxilia a carrega símbolos como ~ e ç -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Informa tamanho da largura do dispositivo e a escala (1.0 informa que não está com zoom) -->
+    <title>AluraBooks</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+    </style>
+</head>
+
+<body>
+    <header class="cabeçalho">
+
+        <div class="container">
+            <input type="checkbox" id="menu" class="container__botao">
+            <label for="menu"> <!--A função "label for" serve para associar todos os elementos que estão dentro dela com um outro elemento através do id.-->
+                <span class="cabeçalho__menu-hamburguer container__img"></span> <!--Assim, está associando este "span" com o "input", uma vez que ambos possuem o id "menu". Dessa forma, estamos associando o checkbox com a imagem do menu-hamburguer-->
+            </label>
+
+            <!--"ul" abre uma lista e "li" define os itens da lista-->
+            <ul class="lista-menu">
+                <li class="lista-menu__titulo">Categorias</li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Programação</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Front-end</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Infraestrutura</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Business</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Design & UX</a>
+                </li>
+
+            </ul>
+
+            <img src="images/Logo.svg" alt="Logo de AluraBooks">
+        </div>
+
+        <div class="container">
+            <a href="#"><img src="images/Favoritos.svg" alt="Meus favoritos" class="container__img"></a>
+            <a href="#"><img src="images/Compras.svg" alt="Carrinho de compras" class="container__img"></a>
+            <a href="#"><img src="images/Usuário.svg" alt="Meu perfil" class="container__img"></a>
+        </div>
+
+    </header>
+</body>
+
+</html>

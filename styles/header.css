@@ -1,0 +1,60 @@
+.cabeçalho__menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.cabeçalho {
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /*Libera a opção de colocar outros atributos como "topo", "lado direito", "embaixo", etc*/
+
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.container__img {
+    padding: 1em;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute; /*Permite que o elemento se movimente de acordo com o elemento pai que teve uma position diferente de static (nesse caso, está puxando o "position: relative" do elemento "cabeçalho"*/
+    top: 100%;
+    width: 65%;
+}
+
+.container__botao:checked~.lista-menu {
+    display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item {
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.lista-menu__titulo {
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase; /*Deixa a letra maiúscula*/
+}
+
+.container__botao {
+    display: none;
+}
