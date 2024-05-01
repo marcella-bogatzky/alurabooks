@@ -86,15 +86,140 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
 
+            <div class="card">
+
+                <!--1ª linha-->
+                <div class="card__descricao">
+
+                    <!--1ª coluna-->
+                    <div class="descricao">
+                        <h3 class="descricao__titulo">Talvez você também se interesse por...</h3>
+                        <h2 class="descricao__titulo-livro">Angular 11 e Firebase</h2>
+                        <p class="descricao__texto">Construindo uma aplicação integrada com a plataforma do Google.</p>
+                    </div>
+
+                    <!--2ª coluna-->
+                    <img src="images/Perfil-escritora 2.svg" class="descricao__imagem">
+                    
+                </div>
+
+                <!--2ª linha-->
+                <div class="card__botoes">
+
+                    <!-- 1ª coluna -->
+                    <ul class="botoes">
+                        <li class="botoes__item"><img src="images/Favoritos.svg"></li>
+                        <li class="botoes__item"><img src="images/Compras.svg"></li>
+                    </ul>
+
+                    <!-- 2ª coluna -->
+                    <a href="#" class="botoes__ancora">Saiba mais</a>
+
+                </div>
+
+            </div>
+
         </div>
 
     </section>
 
+    <section class="carrossel">
+        <h2 class="carrossel__titulo">Mais vendidos</h2>
+
+        <!-- Div correspondente ao Carrossel  de Mais Vendidos -->
+        <div class="swiper">
+
+           <!-- If we need pagination -->
+           <div class="swiper-pagination"></div>
+
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="images/Tuning.svg"></div>
+                <div class="swiper-slide"><img src="images/Acessibilidade.svg"></div>
+                <div class="swiper-slide"><img src="images/Nodejs.svg"></div>
+                <div class="swiper-slide"><img src="images/Liderança.svg"></div>
+            </div>
+         
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
+
+        <!-- Div correspondente ao Card de Autora do Mês -->
+        <div class="card">
+
+            <!-- 1ª linha -->
+            <div class="card__descricao">
+
+                <!-- 1ª coluna -->
+                <div class="descricao">
+                    <div class="estrelas">
+                        <img src="images/Star 1.svg">
+                        <img src="images/Star 1.svg">
+                        <img src="images/Star 1.svg">
+                        <img src="images/Star 1.svg">
+                        <img src="images/Star 1.svg">
+                    </div>
+                    <h3 class="descricao__titulo">Autora do Mês</h3>
+                    <h2 class= "descricao__titulo-livro">Juliana Agarikov</h2>
+                    <p class="descricao__texto">Analista de sistemas e escritora, Juliana é especialista em Front-End.</p>
+                </div>
+
+                <!-- 2ª coluna -->
+                <img src="images/Perfil-escritora 1.svg" class="descricao__imagem">
+            </div>
+
+            <!-- 2ª linha -->
+            <div class="card__botoes">
+
+                <!-- 1ª linha -->
+                <ul class="botoes">
+                    <li class="botoes__item"><img src="images/Favoritos.svg"></li>
+                </ul>
+
+                <!-- 2ª linha -->
+                <a href="#" class="botoes__ancora">Saiba mais</a>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="topicos">
+        <h2 class="topicos__titulos">TÓPICOS VISITADOS RECENTEMENTE</h2>
+        <ul class="topicos__listas">
+            <il class="topicos__item"><a href="#" class="topicos__link">Android</a></il>
+            <il class="topicos__item"></li><a href="#" class="topicos__link">Marketing Digital</a></il>
+            <il class="topicos__item"></li><a href="#" class="topicos__link">Agile</a></il>
+            <il class="topicos__item"></li><a href="#" class="topicos__link">Startups</a></il>
+            <il class="topicos__item"></li><a href="#" class="topicos__link">HTML e CSS</a></il>
+            <il class="topicos__item"></li><a href="#" class="topicos__link">Python</a></il>
+            <il class="topicos__item"></li><a href="#" class="topicos__link">OO</a></il>
+            <il class="topicos__item"></li><a href="#" class="topicos__link">Java</a></il>
+        </ul>
+    </section>
+
+    <section class="contato">
+        <h2 class="contato__titulo">Fique por dentro das novidades!</h2>
+        <p class="contato__texto">Atualizações de e-books, novos livros, promoções e outros.</p>
+        <input type="email" placeholder="Cadastre seu e-mail" class="contato__email">
+    </section>
+
+    <hr class="risco"></hr>
+
+    <footer class="rodape">
+        <h2 class="rodape__titulo">Grupo Alura</h2>
+    </footer>
+
+
+    <!-- Esse script ainda faz parte das configurações dos Carrosseis. Ele é quem define a "aparência" do Carrossel-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.swiper', {
-            spaceBetween: 10,
-            slidesPerView: 3,
+            spaceBetween: 17,
+            slidesPerView: 2,
+            centeredSlides: true, //Deixa o slide centralizado (faz o efeito de página dividida nos livros das bordas)
             pagination: {
                 el: '.swiper-pagination',
                 type: 'bullets',
