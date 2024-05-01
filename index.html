@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Informa tamanho da largura do dispositivo e a escala (1.0 informa que não está com zoom) -->
     <title>AluraBooks</title>
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="styles.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
     </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
@@ -60,6 +62,45 @@
 
     </section>
 
+    <section class="carrossel">
+        <h2 class="carrossel__titulo">Novos lançamentos</h2>
+
+        <!-- Slider main container. Toda essa class="swiper" é um template pronto do site swiperjs.com -->
+        <div class="swiper">
+
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>   
+
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="images/Acessibilidade.svg"></div>
+                <div class="swiper-slide"><img src="images/Gestão2.svg"></div>
+                <div class="swiper-slide"><img src="images/Liderança.svg"></div>
+                <div class="swiper-slide"><img src="images/MetricasAgeis.svg"></div>
+                <div class="swiper-slide"><img src="images/Nodejs.svg"></div>
+                <div class="swiper-slide"><img src="images/Tuning.svg"></div>
+            </div>    
+            
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            spaceBetween: 10,
+            slidesPerView: 3,
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+        });
+        </script>
 </body>
 
 </html>
